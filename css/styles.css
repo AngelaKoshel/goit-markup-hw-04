@@ -23,6 +23,7 @@ header {
     border-bottom: 1px solid #E7E9FC;
     padding-top: 24px;
     padding-bottom: 24px;
+    box-shadow: 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .visually-hidden {
     position: absolute;
@@ -262,6 +263,8 @@ img {
 .team-item {
     list-style-type: none;
     background-color: var(--color-white, #FFFFFF);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-title-three{
     color: var(--color-grey, #2e2f42);
@@ -323,6 +326,9 @@ img {
     font-size: 36px;
     line-height: 1.11;
     margin-bottom: 72px;
+    font-family: 'Roboto';
+    color: #2E2F42;
+    letter-spacing: 0.02em;
 }
 
 .customers-list {
@@ -352,9 +358,7 @@ img {
 .customers-link:is(:hover, :focus){
     border: 1px solid var(--hover-focus-color, #404bbf);
 }
-/* .customers-link:is(:hover, :focus) > .customers-icon{
-    fill: #404bbf;
-} */
+
 .customers-link:hover > .customers-icon{
     fill: #404bbf;
 }
@@ -386,22 +390,6 @@ img {
     border-radius: 4px;
     width: 'fit-content';
 }
-/* Не розумію для чого тут ордер чи взагалі правильно його зробила.
-.order-zero{
-    order: 0;
-}
-.order-one{
-    order: 1;
-}
-.order-two{
-    order: 2;
-}
-.order-three{
-    order: 3;
-}
-.order-four{
-    order: 4;
-} */
 
 .filters-btn:is(:hover, :focus) {
     background-color: #404BBF;
@@ -450,7 +438,6 @@ img {
 .footer-box{
     display: flex;
     flex-direction: column;
-    /* max-width: 50%;  */
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -470,9 +457,15 @@ img {
     margin-top: 16px;
     line-height: 1.5;
 }
-.footer-social {}
+.footer-social {
+    margin-left: 120px;
+}
 
-.footer-social-list {}
+.footer-social-list {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
 
 .footer-social-item {
     width: 40px;
@@ -487,10 +480,21 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    
 }
 
 .footer-social-icons {
     width: 24px;
     height: 24px;
-    fill: #ffffff;}
+    fill: #ffffff;
+}
+.footer-social-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+}
+.footer-social-link:is(:hover,:focus){
+    background-color: #31D0AA;
+}
